@@ -1,0 +1,1 @@
+basic express server with GET and POST routes and enables static assets to be served
