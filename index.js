@@ -36,6 +36,10 @@ app.get('/todo/:id', (req, res) => {
     res.send(req.params["id"]);
 });
 
+app.get('/anotherroute', (req, res) => {
+  res.send('another route added');
+})
+
 app.post('/', (req, res) => {
     res.send('got a POST request');
 });
