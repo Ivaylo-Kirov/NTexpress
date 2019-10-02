@@ -6,14 +6,9 @@ const sequelize = new Sequelize('mysqlfirsttest', 'admin', 'Leafs2905.', {
     dialect: 'mysql'
 });
 
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log('Connection has been established successfully.');
-  })
-  .catch(err => {
-    console.error('Unable to connect to the database:', err);
-  });
+sequelize.authenticate()
+  .then(() => console.log('Connection has been established successfully.'))
+  .catch(err => console.error('Unable to connect to the database:', err));
 
 class Todo extends Sequelize.Model {}
 Todo.init({
